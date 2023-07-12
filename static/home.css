@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Crimson Pro', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+}
+.container{
+    position: relative;
+    width: auto;
+    border-radius: 10px;
+    padding: 100px;
+    background-color: bisque;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 10px #1c1f16;
+}
+
+.header{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    padding: 40px;
+    text-align: center;
+}
+.upform{
+    position: relative;
+    min-height: 740px;
+}
+.container form .form{
+    position: absolute;
+    transition: 0.3s ease;
+}
+.container form .form.second{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+form.secActive .form.second{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #005d62;
+}
+.fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #00858c;
+}
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 2);
+    padding: 0px 35px 0px 0px;
+    flex-direction: column;
+    margin: 5px 0;
+}
+.input-field label{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+.input-field input, select{
+    outline: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: black;
+    border-radius: 5px;
+    border: 2px solid #aaa;
+    border-color: black;
+    background-color: beige;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+
+.container button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 45px;
+    width: 100%;
+    border: #1c1f16;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: brown;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form button:hover{
+    background-color: rgb(232, 100, 100);
+}
+
+.pred{
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    color: black
+}

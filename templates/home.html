@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <title>Bondora Financial Risk Prediction</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header"><h1 style="font-weight: bold;"> Bondora Financial Risk Prediction</h1></div>
+        <br><br>
+        <form action="{{ url_for('predict')}}" method="post" class="upform">
+            <div class="form first">
+                <div class="details personal">
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>InterestAndPenaltyBalance</label>
+                            <input type="text" name="InterestAndPenaltyBalance" required="required" />
+                        </div>
+                        
+                        <div class="input-field">
+                            <label>Principal Payments Made</label>
+                            <input type="text" name="PrincipalPaymentsMade" required="required" />
+                        </div>
+
+                        <div class="input-field">
+                            <label>Principal Balance</label>
+                            <input type="text" name="PrincipalBalance" required="required" />
+                        </div>
+
+                        <div class="input-field">
+                            <label>Interest Rate</label>
+                            <input type="text" name="Interest" required="required"/>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Monthly Payment</label>
+                            <input type="text" name="MonthlyPayment" required="required"/>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Amount</label>
+                            <input type="text" name="Amount" required="required" />
+                        </div>
+
+                        <div class="input-field">
+                            <label>Applied Amount</label>
+                            <input type="text" name="AppliedAmount" required="required" />
+                        </div>
+
+                        <div class="input-field">
+                            <label>Language</label>
+                            <select required="required" name="LanguageCode">
+                                <option>Estonian</option>
+                                <option>Finnish</option>
+                                <option>Spanish</option>
+                                <option>Russian</option>
+                                <option>English</option>
+                                <option>Slovakian</option>
+                                <option>German</option>
+                                <option>Others</option>
+                                
+                            </select>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label>Rating</label>
+                            <select required="required" name="Rating">
+                                <option>F</option>
+                                <option>E</option>
+                                <option>HR</option>
+                                <option>D</option>
+                                <option>C</option>
+                                <option>B</option>
+                                <option>A</option>
+                                <option>AA</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Country</label>
+                            <select required="required" name="Country">
+                                <option>EE</option>
+                                <option>FI</option>
+                                <option>ES</option>
+                                <option>SK</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Restructured</label>
+                            <select required="required" name="Restructured">
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+
+                        </div>
+
+                        
+                        <div class="input-field">
+                            <label>Loan Duration</label>
+                            <input type="text" name="LoanDuration" required="required" />
+                        </div>
+
+                        <div class="input-field">
+                            <label>Monthly Payment Day</label>
+                            <input type="text" name="MonthlyPaymentDay" required="required" />
+                        </div>
+                        
+                        <div class="input-field">
+                            <label>Total Liabilities</label>
+                            <input type="text" name="LiabilitiesTotal" required="required" />
+                        </div>
+
+                        <div class="input-field">
+                            <label>Total Income</label>
+                            <input type="text" name="IncomeTotal" required="required" />
+                        </div>
+                        <div class="input-field">
+                            <label>Interest and penality payments made</label>
+                            <input type="text" name="InterestAndPenaltyPaymentsMade" required="required" />
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="bt">
+                    <button type="submit" class="btn btn-block btn-large">Predict</button>
+                </div>
+            </div>
+        </form>
+        <div class ="pred">
+            {{ prediction_text|safe }}
+        </div>
+        
+    </div>
+</body>
+</html>
