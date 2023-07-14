@@ -1,1 +1,1 @@
-You can check the deployed Bondora financial prediction model [Here](https://model-deployment-c4be.onrender.com)
+You can check the deployed Bondora financial risk prediction model [here](https://model-deployment-c4be.onrender.com)
