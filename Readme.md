@@ -3,7 +3,7 @@
 **Data Scientist internship work at Technocolabs Softwares.**
 
 
-
+Deployed Web App: https://model-deployment-c4be.onrender.com 
 # Project Summary
 The main purposes of this analysis are to summarize the characteristics of variables that can affect the loan status and to get some ideas about the relationships among variables.
 
@@ -171,26 +171,51 @@ The dataset is of shape (134529,112) i.e., with 134529 rows and 112 columns. Her
 ## Exploratory Data Analysis
 The exploratory data analysis (EDA) conducted on the dataset from the Bondora peer-to-peer lending platform revealed insights about the demographic and financial information of borrowers, as well as loan transactions. By examining the data, patterns, trends, and relationships were identified to gain a better understanding of the dataset. The EDA helped in uncovering important factors that may influence credit risk, such as the borrowers' characteristics and loan attributes. This analysis provided a foundation for further analysis and modeling in the credit risk assessment of the peer-to-peer lending platform.
  * Handle null values by replacing them with mean and mode. 
- IMAGE
+ ![Alt text](image.png)
  
  * County and CreditScoreEsMicroL columns were dropped as we don't need information of County when we have the city and country of the borrower. CreditScoreEsMicrol have more missing values hence it is also dropped. 
  * Univariate and Bivariate analysis were performed. 
  * ## Univariate Analysis
 	  -  Identified the outliers. We can see there are lot of outliers present where LoanDuration, MonthlyPaymentDay, are outlier free. There are very few outliers present in columns Age and LiabilitiesTotal.
+	  ![Alt text](image-16.png)
+	  ![Alt text](image-18.png)
+	  ![Alt text](image-14.png)
+	  ![Alt text](image-15.png)
+	  As we can see, there are also borrowers of low age(0-2) and there are very few outliers for age column. These outliers must be of those 0-2 age.
+	  ![Alt text](image-17.png)
 	  - Countplots of all categorical columns were plotted and we can observe that there are some columns with high not specified/not set data. 
 		  - UseOfLoan
 		  - MaritalStatus
 		  - EmploymentStatus
 		  - OccupationArea
 		  While HomeOwnershipType, Education and VerificationType have few Not set data and the remaining columns are completely defined
+	 ![Alt text](image-2.png)
+	 ![Alt text](image-3.png)
+	 ![Alt text](image-4.png)
+	 ![Alt text](image-5.png)
+	 ![Alt text](image-6.png)
+	 ![Alt text](image-7.png)
+	 ![Alt text](image-8.png)
+	 ![Alt text](image-9.png)
+	 ![Alt text](image-10.png)
+	 ![Alt text](image-11.png)
+	 ![Alt text](image-12.png)
+	 ![Alt text](image-13.png)
 	- From the boolean features
 		-   More than 63% customers have no prior credit history in Bondora
+		*NewCreditCustomer*
+		![Alt text](image-19.png)
 		-   The original maturity date has been increased by more than 60 days only for 20% of the loans
+		*Restructured*
+		![Alt text](image-20.png)
 - ## Bivariate Analysis
 	- There are **42794** *default borrowers* and **34600** *non default borrowers*. Let's observe the correlated features. 
+	![Alt text](image-21.png)
 	- From the correlation matrix, 
+	![Alt text](image-22.png)
 		-   Target variable is highly negatively correlated with PrincipalPaymentsMade
 		-  Target variable is positively correlated with InterestAndPenaltyBalance and PrincipalBalance.
+		![Alt text](image-23.png)
 		 -   AppiledAmount, Amount, MonthlyPayment, PrincipalBalance are highly correlated
 		-  Amount, PrincipalPaymentsMade are highly correlated
 		- PreviousRepaymentsBeforeLoan is correlated with AmountOfPreviousLoansBeforeLoan
@@ -205,24 +230,85 @@ The exploratory data analysis (EDA) conducted on the dataset from the Bondora pe
 
 * Label encoding of categorical variables. 
 * **Mutual Information scores** were calculated for each and every column.
+* *Initial MI scores*
+![Alt text](image-24.png)
 * Outliers were handled by replacing them with the median values. \
 * Standardization and normalization were performed in order to scale values. Any of them can be used.
 * Top features with high MI Scores were selected as important features. 
+`feature_cols = ['InterestAndPenaltyBalance', 'PrincipalPaymentDifference',
+       'PrincipalPaymentsMade', 'PrincipalBalance',
+       'InterestAndPenaltyPaymentsMade', 'Interest', 'MonthlyPayment',
+       'Amount', 'AppliedAmount', 'LanguageCode', 'Rating', 'Country','Restructured','LoanDuration','MonthlyPaymentDay']`
 * Principal component analysis was done and the number of components were observed as 3. After pca we find that the performance is not increasing, instead decreasing. So it is not taken into consideration.
+![Alt text](image-25.png)
+![Alt text](image-26.png)
 * Final data with important features is saved into a csv file.
 
 ## Classification Modelling
 
-Models selected for this task were
-* KNN Classifier
-* XGBoost Classifier
-Steps performed were 
-	* Splitting and Training
-	* Testing
-	* Evaluating
-	* Validation
-	* Visualization
-Let's proceed with XGBoost Classifier as we got much better accuracy 96% and also other evaluation metrics.
+It is the mathematical representation of the output of the training process. Our project comes under the category of classification, which is a supervised learning method, we have done modelling using two algorithms
+
+* K-Nearest Neighbor(KNN) classifier
+* XGBoost classifier Steps involved are:
+
+1. Data Preparation (Already done)
+
+2. Splitting the data
+
+3. Choosing a classification model.
+
+	* The above classification models for chosen for this task
+4. Training the Model
+
+5. Model Evaluation
+
+	Using different metrics
+
+	* Accuracy
+	* Precision
+	* Recall
+	* F1 score
+	* Area under the ROC Curve(AUC-ROC)
+6. Model Validation
+
+	* k-fold cross validation
+
+**Using KNN Model**
+![Alt text](image-27.png)
+*Classification Report*:
+              precision    recall  f1-score   support
+
+           0       0.90      0.96      0.93      6861
+           1       0.97      0.91      0.94      8618
+
+    accuracy                           0.93     15479
+   macro avg       0.93      0.94      0.93     15479
+weighted avg       0.94      0.93      0.93     15479
+![Alt text](image-28.png)
+![Alt text](image-29.png)
+`We got the Area under ROC curve as 93.68`
+`Accuracy-93.4%`
+![Alt text](image-30.png)
+These are the accuracies we get after performing k-fold cross validation(k=10)
+
+**Using XGBClassifier**
+![Alt text](image-31.png)
+*Classification Report*:
+              precision    recall  f1-score   support
+
+           0       0.93      0.98      0.96      6861
+           1       0.99      0.94      0.96      8618
+
+    accuracy                           0.96     15479
+   macro avg       0.96      0.96      0.96     15479
+weighted avg       0.96      0.96      0.96     15479
+![Alt text](image-32.png)
+![Alt text](image-33.png)
+`We got the Area under ROC curve as 96.32`
+`Accuracy-96.07%` for testing dataset
+![Alt text](image-34.png)
+These are the accuracies we get after performing k-fold cross validation(k=10)
+* We observe XGBClassifier is performing better than KNNClassifier. Let's proceed with XGBClassifier for further deployment. 
 
 ## Regression Modelling
 Three target variables are created 
