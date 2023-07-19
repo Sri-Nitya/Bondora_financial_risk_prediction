@@ -307,38 +307,55 @@ It is the mathematical representation of the output of the training process. Our
 	* k-fold cross validation
 
 **Using KNN Model**
+
+
 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/ae729020-b468-46ca-9e3f-9b564376d45f)
 
 
 *Classification Report*:
+
+
 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/c51fafd4-be4d-4be3-a7c4-6580bb6e6d0a)
 
+
 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/131d27e1-9fb1-4014-ba29-9b25f3d5d3d8)
+
 
 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/77a44903-b614-41ed-a656-83369607cb94)
 
 
 `We got the Area under ROC curve as 93.68`
 `Accuracy-93.4%`
+
+
 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/9a13be58-3241-4d6b-bd7a-277c8aa5906a)
 
 
 These are the accuracies we get after performing k-fold cross validation(k=10)
 
 **Using XGBClassifier**
+
+
 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/cad05505-c478-49a2-997d-204a9daccfe5)
 
 *Classification Report*:
+
+
 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/18e63c05-9da3-4cb9-83fa-98a1e4a87411)
+
 
 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/9576b300-8b94-419f-9a98-bee781fd9117)
 
+
 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/89906de4-3005-440b-b131-c3c69f276d9a)
+
 
 `We got the Area under ROC curve as 96.32`
 `Accuracy-96.07%` for testing dataset
 
+
 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/a0f9dd2d-d009-4935-be77-ec7b6ca7b075)
+
 
 These are the accuracies we get after performing k-fold cross validation(k=10)
 * We observe XGBClassifier is performing better than KNNClassifier. Let's proceed with XGBClassifier for further deployment. 
