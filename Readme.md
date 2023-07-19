@@ -171,7 +171,8 @@ The dataset is of shape (134529,112) i.e., with 134529 rows and 112 columns. Her
 ## Exploratory Data Analysis
 The exploratory data analysis (EDA) conducted on the dataset from the Bondora peer-to-peer lending platform revealed insights about the demographic and financial information of borrowers, as well as loan transactions. By examining the data, patterns, trends, and relationships were identified to gain a better understanding of the dataset. The EDA helped in uncovering important factors that may influence credit risk, such as the borrowers' characteristics and loan attributes. This analysis provided a foundation for further analysis and modeling in the credit risk assessment of the peer-to-peer lending platform.
  * Handle null values by replacing them with mean and mode. 
- ![Alt text](image.png)
+ ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/f4b41bca-d8c5-413c-ab43-494e526d1c3f)
+
  
  * County and CreditScoreEsMicroL columns were dropped as we don't need information of County when we have the city and country of the borrower. CreditScoreEsMicrol have more missing values hence it is also dropped. 
  * Univariate and Bivariate analysis were performed. 
