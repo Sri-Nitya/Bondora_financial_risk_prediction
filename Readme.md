@@ -178,45 +178,68 @@ The exploratory data analysis (EDA) conducted on the dataset from the Bondora pe
  * Univariate and Bivariate analysis were performed. 
  * ## Univariate Analysis
 	  -  Identified the outliers. We can see there are lot of outliers present where LoanDuration, MonthlyPaymentDay, are outlier free. There are very few outliers present in columns Age and LiabilitiesTotal.
-	  ![Alt text](image-16.png)
-	  ![Alt text](image-18.png)
-	  ![Alt text](image-14.png)
-	  ![Alt text](image-15.png)
+	  ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/b6e6b649-a29e-4b42-8156-febb627cd47b)
+
+	  ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/2f31067b-8bb8-417b-97b5-372ac3765c12)
+
+	  
+	  ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/741d54f7-def5-4c83-aeb7-6137b2d47e59)
+	  ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/150a447a-efd1-4fb3-9cf7-ac5f030f841b)
+
 	  As we can see, there are also borrowers of low age(0-2) and there are very few outliers for age column. These outliers must be of those 0-2 age.
-	  ![Alt text](image-17.png)
+	  ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/b316ec0e-0a4f-489d-bbd7-e7de9f28c1c7)
+
 	  - Countplots of all categorical columns were plotted and we can observe that there are some columns with high not specified/not set data. 
 		  - UseOfLoan
 		  - MaritalStatus
 		  - EmploymentStatus
 		  - OccupationArea
 		  While HomeOwnershipType, Education and VerificationType have few Not set data and the remaining columns are completely defined
-	 ![Alt text](image-2.png)
-	 ![Alt text](image-3.png)
-	 ![Alt text](image-4.png)
-	 ![Alt text](image-5.png)
-	 ![Alt text](image-6.png)
-	 ![Alt text](image-7.png)
-	 ![Alt text](image-8.png)
-	 ![Alt text](image-9.png)
-	 ![Alt text](image-10.png)
-	 ![Alt text](image-11.png)
-	 ![Alt text](image-12.png)
-	 ![Alt text](image-13.png)
+	 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/217c386f-c466-4759-a912-ab5a1a1153a6)
+
+	 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/4056056e-ca2d-44a8-8147-cc9a0f83b15d)
+
+	 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/c3ed0926-5554-4cba-b300-2d34319b7bda)
+
+	 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/b9c8b867-81e7-4689-adf9-66a75b09c7a4)
+
+	 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/3cbe5c2c-baec-423b-bd68-c1d9ce39dcf3)
+
+	 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/4a0bea61-f549-4a5e-b8f2-d9dd87ea740d)
+
+	 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/12bdcb84-bea6-4123-bfab-2de1f81ced9e)
+
+	 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/935fb722-1987-4928-9524-bb1ff7748710)
+
+	 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/71856055-8a12-4e43-b280-321ad31f78ab)
+
+	 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/f3e7ab53-1dd9-45fb-bc3c-123f19a400f7)
+
+	 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/06d6d9bc-206e-4521-b98b-b01033214126)
+
+	 ![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/b900c0e6-46b6-401e-8a30-bf86b6eeb933)
+
+         
 	- From the boolean features
 		-   More than 63% customers have no prior credit history in Bondora
 		*NewCreditCustomer*
-		![Alt text](image-19.png)
+		![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/d4f1622b-10cd-4d30-be28-5834c9e34c1e)
+
 		-   The original maturity date has been increased by more than 60 days only for 20% of the loans
 		*Restructured*
-		![Alt text](image-20.png)
+		![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/ce84242f-7b02-4e02-b4ff-1ee750225510)
+
 - ## Bivariate Analysis
 	- There are **42794** *default borrowers* and **34600** *non default borrowers*. Let's observe the correlated features. 
-	![Alt text](image-21.png)
+	![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/48ab02d3-c521-48d7-b270-d49226785545)
+
 	- From the correlation matrix, 
-	![Alt text](image-22.png)
+	![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/6ba7e550-57dc-4c3b-b1da-bd82803468ea)
+
 		-   Target variable is highly negatively correlated with PrincipalPaymentsMade
 		-  Target variable is positively correlated with InterestAndPenaltyBalance and PrincipalBalance.
-		![Alt text](image-23.png)
+		![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/f1c4c7a7-8b71-4269-b96a-6241c83c3fc7)
+
 		 -   AppiledAmount, Amount, MonthlyPayment, PrincipalBalance are highly correlated
 		-  Amount, PrincipalPaymentsMade are highly correlated
 		- PreviousRepaymentsBeforeLoan is correlated with AmountOfPreviousLoansBeforeLoan
@@ -232,7 +255,8 @@ The exploratory data analysis (EDA) conducted on the dataset from the Bondora pe
 * Label encoding of categorical variables. 
 * **Mutual Information scores** were calculated for each and every column.
 * *Initial MI scores*
-![Alt text](image-24.png)
+![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/8c6a1662-ac2c-4c57-bc75-0b3329d2c23c)
+
 * Outliers were handled by replacing them with the median values. \
 * Standardization and normalization were performed in order to scale values. Any of them can be used.
 * Top features with high MI Scores were selected as important features. 
@@ -241,8 +265,10 @@ The exploratory data analysis (EDA) conducted on the dataset from the Bondora pe
        'InterestAndPenaltyPaymentsMade', 'Interest', 'MonthlyPayment',
        'Amount', 'AppliedAmount', 'LanguageCode', 'Rating', 'Country','Restructured','LoanDuration','MonthlyPaymentDay']`
 * Principal component analysis was done and the number of components were observed as 3. After pca we find that the performance is not increasing, instead decreasing. So it is not taken into consideration.
-![Alt text](image-25.png)
-![Alt text](image-26.png)
+![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/74c48a93-cf89-4b79-b278-e702703c54df)
+
+![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/93c10788-6169-4444-ac78-e06c090dc96b)
+
 * Final data with important features is saved into a csv file.
 
 ## Classification Modelling
@@ -275,7 +301,8 @@ It is the mathematical representation of the output of the training process. Our
 	* k-fold cross validation
 
 **Using KNN Model**
-![Alt text](image-27.png)
+![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/9835c8fe-22a6-432c-8d61-14e556849289)
+
 *Classification Report*:
               precision    recall  f1-score   support
 
@@ -285,15 +312,19 @@ It is the mathematical representation of the output of the training process. Our
     accuracy                           0.93     15479
    macro avg       0.93      0.94      0.93     15479
 weighted avg       0.94      0.93      0.93     15479
-![Alt text](image-28.png)
-![Alt text](image-29.png)
+![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/6bbfb440-363e-48c3-8ebe-8533e412cded)
+
+![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/c5c40394-1054-4c29-be07-5dd033a5c7c2)
+
 `We got the Area under ROC curve as 93.68`
 `Accuracy-93.4%`
-![Alt text](image-30.png)
+![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/dee1fb25-ea13-4caa-b533-6ffcd150e4f7)
+
 These are the accuracies we get after performing k-fold cross validation(k=10)
 
 **Using XGBClassifier**
-![Alt text](image-31.png)
+![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/2ed539be-43ef-492c-90ab-8976e63575fc)
+
 *Classification Report*:
               precision    recall  f1-score   support
 
@@ -303,11 +334,14 @@ These are the accuracies we get after performing k-fold cross validation(k=10)
     accuracy                           0.96     15479
    macro avg       0.96      0.96      0.96     15479
 weighted avg       0.96      0.96      0.96     15479
-![Alt text](image-32.png)
-![Alt text](image-33.png)
+![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/a79bff9b-d43a-437f-ae72-ec8208ecce4b)
+
+![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/8c96c9ab-f71f-465d-bde5-f02884883380)
+
 `We got the Area under ROC curve as 96.32`
 `Accuracy-96.07%` for testing dataset
-![Alt text](image-34.png)
+![image](https://github.com/Sri-Nitya/Bondora_financial_risk_prediction/assets/78259972/cc674de2-4781-46b2-a9d5-2ee21a61aa09)
+
 These are the accuracies we get after performing k-fold cross validation(k=10)
 * We observe XGBClassifier is performing better than KNNClassifier. Let's proceed with XGBClassifier for further deployment. 
 
